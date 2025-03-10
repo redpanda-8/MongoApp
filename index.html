@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post app</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script type="module" src="./js/index.js" defer></script>
+  </head>
+  <body>
+    <header id="header">
+      <img
+        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ficon-library.com%2Fimages%2Fapp-icon-png%2Fapp-icon-png-17.jpg&f=1&nofb=1&ipt=335fc81739c9be4d7d078c2ce05f6f811ab95992508cd2a2a3dce889841171bc&ipo=images"
+        alt="post logo"
+      />
+      <h1>Post app</h1>
+      <button id="registerSelect">Register</button>
+      <button id="loginSelect">Login</button>
+    </header>
+    <main>
+      <div id="regLogContainer">
+        <form id="registration-form">
+          <h2>REGISTER</h2>
+          <label for="regName">Name</label>
+          <input type="text" name="" id="regName" />
+          <label for="regEmail">Email</label>
+          <input type="email" name="" id="regEmail" />
+          <label for="regPass">Password</label>
+          <input type="password" name="" id="regPass" />
+          <button id="regSubmit">Submit registration</button>
+        </form>
+
+        <form id="login-form">
+          <h2>LOGIN</h2>
+          <label for="logEmail">Email</label>
+          <input type="email" name="" id="logEmail" />
+          <label for="logPass">Password</label>
+          <input type="password" name="" id="logPass" />
+          <button id="logSubmit">Submit login</button>
+        </form>
+      </div>
+      <section id="mainContainer"></section>
+    </main>
+  </body>
+</html>
