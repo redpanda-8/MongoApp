@@ -22,16 +22,11 @@ const recordAd = asyncHandler(async (req, res) => {
 
 // @ get add /ads
 const getAd = asyncHandler(async (req, res) => {
-  const page = parseInt(req.query.page) || 1;
-  const limit = 10; // Show 10 ads per page
-  const skip = (page - 1) * limit;
+  const ads = await Ad.find({});
 
-  const ads = await Ad.find({})
-    .skip(skip)
-    .limit(limit)
-    .select("title description category price link favorites");
-
-  res.status(200).json(ads);
+  const adsWithFavorites = ads.map(ad => {
+    const adObj = ad.toObject();
+    console.log("your ad:",adObj)
 
     // Ensure favorites is an array
     adObj.favorites = ad.favorites || [];
@@ -49,7 +44,9 @@ const getAd = asyncHandler(async (req, res) => {
     adObj.favoritesCount = adObj.favorites.length;
 
     return adObj;
-  
+  });
+
+
   res.status(200).json(adsWithFavorites);
 });
 

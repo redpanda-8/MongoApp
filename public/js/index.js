@@ -127,6 +127,7 @@ registerForm.addEventListener("submit", async(e)=>{
     const email=document.getElementById("regEmail").value
     const password=document.getElementById("regPass").value
     if(name && email && password){
+        console.log('asasasas',name, email, password )
         try{
             const response = await fetch("http://127.0.0.1:999/users/", {
             method: "POST",
