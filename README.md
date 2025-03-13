@@ -2,8 +2,6 @@
 Connect MongoDB with Node.js using Mongoose and testing with Postman.
 CRUD Operations, Authentication, Authorization, JWT, controllers, middleware, models, routes
 
-HOW TO RUN THIS APP
-
 ## Frontend preview:
 1. Clone it to your machine in code editor (VScode/PhpStorm) Terminal write:
     git clone https://github.com/redpanda-8/MongoApp.git
@@ -17,18 +15,29 @@ If no database has been created in MongoDB ->Database->Build a Database->FreeDB-
 
 Start MongoDB:
 1. Check if Network Access of current IP adress is in whitelist
-2. Database Access Edit Check password (must be same) .env file MONGO_URL= (if not-change to new <new> and delete <>)
-3. Clusters Connect -> Drivers -> (2)check VScode do you have mongodb-if no in Terminal npm istall mongodb, (3) check .env MONGO_URL= is it same link -> Done
+2. Clusters Connect -> Drivers ->
+    1. (2)check code editor (VScode) do you have mongodb - if no in Terminal write "npm install mongodb"
+    2. (3) check .env MONGO_URL= IS IT same link
+3. Database Access Edit Check password (must be same) in .env file MONGO_URL= (if not-change to new <new> and delete <>)
 
 Postman:
 1. Download Postman desktop agent - open RMouseClick in Taskbar
-2. In webpage My Workplaces -> New -> HTTP -> http://127.0.0.1:999 ->Choose method
-for example: POST->Body->Raw->for example:
-{
-    "name": "Pukis",
-    "email": "pukis@gmail.com",
-    "password": "pukis123",
-    "role": "simple"
-}
--> push Send
+2. In webpage My Workplaces -> New -> HTTP -> http://127.0.0.1:999 -> Choose method
+for example:
+
+    1. POST->Body->Raw->for example:
+    {
+        "name": "Pukis",
+        "email": "pukis@gmail.com",
+        "password": "pukis123",
+        "role": "simple"
+    }
+    2. -> push Send
 3. Checking if the data was saved in MongoDB push refresh.
+
+Make sure PORTS in all files are the same:
+1. .vscode folder > settings.json
+2. src folder > app.js
+3. public > js folder files
+4. .env
+5. server.js 
