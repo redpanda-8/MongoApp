@@ -41,3 +41,36 @@ Make sure PORTS in all files are the same:
 3. public > js folder files
 4. .env
 5. server.js 
+
+--------------------------------------------------------------------------------------------------------------------------
+
+### Užduotis SKELBIMAI:
+Sukurti skelbimų WEB programą (angl. application), kurią pasitelkę vartotojai galėtų skelbti ir rasti informaciją apie parduodamas prekes bei paslaugas, pasižymėti.
+
+### Programą (angl. application) sudaro dvi dalys:
+1. Administracinė sritis.
+2. Vieša sritis.
+
+### Administracinės srities aprašas ir jos privalomos funkcijos:
+
+1. Administracinės srities funkcijos prieinamos tik autentifikuotam vartotojui.
+2. Jeigu vartotojas nėra autentifikuotas, pradiniame puslapyje rodoma prisijungimo forma.
+3. Autentifikuotas vartotojas (Administratorius) gali blokuoti netinkamą turinį ir vartotojus, įvesti skelbimų kategorijas.
+Autentifikuotas vartotojas (Vartotojas) gali pridėti skelbimą, nurodydamas pavadinimą, kategoriją, aprašą, kainą, nuotrauką, koreguoti tik savo skelbimų duomenis, juos ištrinti, sudominusius skelbimus išsaugoti patikusiųjų sąraše.
+4. Administracinės srities vartotojo sąsajai gali būti naudojami Boostrap šablonai.
+
+### Viešosios srities aprašas ir jos privalomos funkcijos:
+1. Vieša sritis turi būti realizuota naudojant HTML5, CSS ir (arba) Bootstrap, JavaScript.
+2. Skelbimų paieška vykdoma naudojant filtrą pagal kategorijas ir paieškos žodį.
+3. Skelbimas gali būti pridedamas į patikusiųjų sąrašą, paspaudus širdutę. Po paspaudimo pasižymėjimas išsaugomas duomenų bazėje.
+
+### Užduoties etapai:
+1. Sukurti naują projektą
+2. Sukurti duomenų bazę
+3. Sukurti administratoriaus vartotojo sąsają.
+4. Sukurti naujo skelbimo įvedimo puslapį ir realizuoti skelbimo duomenų išsaugojimą duomenų bazėje. Formos duomenys turi būti validuojami, kad duomenų bazėje būtų korektiška informacija.
+5. Sukurti skelbimų valdymo puslapį, kuriame būtų galima pašalinti skelbimus ir keisti jų duomenis.
+6. Sukurti vartotojo registracijos puslapį, kuriame vartotojas registruojasi, o jo duomenys išsaugomi duomenų bazėje. Pastaba: vartotojo slaptažodis negali būti saugomas duomenų bazėje atviru tekstu (plain text).
+7. Sukurti vartotojo prisijungimo puslapį. Prisijungęs vartotojas autentifikuojamas ir autorizuojamas administracinėje sistemoje.
+8. Suprojektuoti ir realizuoti viešos srities vartotojo sąsają. Privalomas suderinamumas su išmaniaisiais įrenginiais.
+9. Įkelti užduoties kodą į sukurtą GITHUB saugyklą (angl. repository). Turi būti sukurtas README.MD failas, kuriame surašyta instrukcija, kaip reikia paleisti programą (angl. application), pateikti prisijungti prie administracinės ir kliento dalių reikalingi duomenys.
